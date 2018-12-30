@@ -1,0 +1,13 @@
+
+Map:
+	List of walls
+	width, height
+	vector <Point> getPoints() -> choose candidates and create edges between any two points if they don't have obstacles between them
+
+Grid:
+	Map
+	List of Sample Points (vector<Point> nodes)
+
+Navigation:
+	Grid
+	path-finding mehtods and algorithms(from Position X to Position Y)
