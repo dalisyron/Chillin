@@ -1,5 +1,3 @@
-#include "vector"
-
 class Point {
 public:
 	Point(double x, double y);
@@ -9,7 +7,6 @@ public:
 	void setY(double y);
 	double getDistance(Point &P);
 	Point();
-	std::vector <Point*> adj;
 private:
 	double x;
 	double y;
