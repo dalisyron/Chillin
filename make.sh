@@ -1,0 +1,1 @@
+g++ main.cpp Line.cpp Point.cpp Node.cpp -o test
