@@ -1,4 +1,5 @@
 #include "Line.hpp"
+#include "Node.hpp"
 #include <iostream>
 
 using namespace std;

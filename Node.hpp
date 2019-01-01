@@ -3,6 +3,7 @@
 
 class Node {
 public:
+  template<typename NodeTag>
 	Node(Point pos);
 	Point getPosition();
 	void setPosition(Point pos);

@@ -1,5 +1,18 @@
 #include "Node.hpp"
 
+struct WallNode {
+
+};
+
+struct MedicNode {
+
+};
+
+struct PowerNode {
+
+};
+
+template <typename NodeTag>
 Node::Node(Point pos) {
 	setPosition(pos);
 }
