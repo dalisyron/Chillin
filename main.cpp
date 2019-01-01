@@ -5,6 +5,7 @@
 using namespace std;
 
 int main() {
+  WallNode a;
 	Point P(10, 10);
 	Point Q(20, 20);
   Line L(P, Q);
