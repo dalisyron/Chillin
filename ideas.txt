@@ -2,11 +2,18 @@
 Map:
 	List of walls
 	width, height
-	vector <Point> getPoints() -> choose candidates and create edges between any two points if they don't have obstacles between them
+
+Wall:
+  Point start, end
+  Intersect(Point P, Point Q);
 
 Grid:
-	Map
-	List of Sample Points (vector<Point> nodes)
+	List of Nodes (vector<Node> nodes)
+  static Grid Build(map, medics, powerups)
+
+Node:
+  type
+  Point
 
 Navigation:
 	Grid
