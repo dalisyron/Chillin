@@ -1,1 +1,1 @@
-g++ main.cpp Line.cpp Point.cpp Node.cpp -o test
+g++ main.cpp Line.cpp Point.cpp Node.cpp Wall.cpp -o test

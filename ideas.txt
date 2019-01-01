@@ -1,4 +1,4 @@
-
+  
 Map:
 	List of walls
 	width, height

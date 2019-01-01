@@ -5,6 +5,10 @@ Line::Line(Point P, Point Q) {
   setEnd(Q);
 }
 
+Line::Line() {
+  //pass
+}
+
 void Line::setStart(Point P) {
   this -> start_point = P;
 }
