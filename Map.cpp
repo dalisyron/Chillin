@@ -1,7 +1,9 @@
 #include "Map.hpp"
 
 Map::Map(double height, double width , std::vector<Wall> walls) {
-
+  setHeight(height);
+  setWidth(width);
+  this -> Walls = walls;
 }
 
 Map::Map() {

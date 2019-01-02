@@ -1,3 +1,6 @@
+#ifndef NODE_HPP
+#define NODE_HPP
+
 #include "Point.hpp"
 #include <vector>
 #include <iostream>
@@ -12,3 +15,5 @@ private:
 	Point pos;
   std::string type;
 };
+
+#endif

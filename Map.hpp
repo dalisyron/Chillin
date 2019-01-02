@@ -1,3 +1,6 @@
+#ifndef MAP_HPP
+#define MAP_HPP
+
 #include "Wall.hpp"
 #include <vector>
 
@@ -9,8 +12,10 @@ public:
   double Width();
   void setHeight(double height);
   void setWidth(double width);
-  std::vector <Wall> walls;
+  std::vector <Wall> Walls;
 private:
   double height;
   double width;
 };
+
+#endif

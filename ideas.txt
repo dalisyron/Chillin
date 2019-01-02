@@ -1,4 +1,3 @@
-  
 Map:
 	List of walls
 	width, height
@@ -9,10 +8,11 @@ Line:
 
 Wall:
   Line
-  
+  is_border
+
 Grid:
 	List of Nodes (vector<Node> nodes)
-  static Grid Build(map, medics, powerups)
+  static Grid Build(map, vector<medics>, vector<powerups>)
 
 Node:
   type
@@ -20,4 +20,7 @@ Node:
 
 Navigation:
 	Grid
-	path-finding mehtods and algorithms(from Position X to Position Y)
+	path-finding methods and algorithms(from Position X to Position Y)
+  vector <Point> getPath(P, Q):
+    PriorityQueue -> P, Q, Grid.nodes
+    dijkstra(PQ)

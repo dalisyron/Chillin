@@ -2,6 +2,8 @@
 #include "Node.hpp"
 #include "Wall.hpp"
 #include "Map.hpp"
+#include "Grid.hpp"
+
 #include <iostream>
 
 using namespace std;
@@ -39,6 +41,17 @@ public:
     cout << testWalls.size() << endl;
 
     testMap = Map(100.0, 100.0, testWalls);
+    Point P = testMap.Walls[0].getLine().getStart();
+    cout << P.X() << " " << P.Y() << endl;
+    P = testMap.Walls[0].getLine().getEnd();
+    cout << P.X() << " " << P.Y() << endl;
+    Grid G(testMap);
+    P = G.getMap().Walls[0].getLine().getStart();
+    cout << P.X() << " " << P.Y() << endl;
+    P = G.getMap().Walls[0].getLine().getEnd();
+    cout << P.X() << " " << P.Y() << endl;
+    
+    return true;
   }
 }F;
 
