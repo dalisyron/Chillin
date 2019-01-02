@@ -3,6 +3,11 @@
 
 Node::Node(Point pos) {
 	setPosition(pos);
+  this -> Parent = NULL;
+}
+
+Node::Node() {
+  //pass
 }
 
 void Node::setPosition(Point pos) {

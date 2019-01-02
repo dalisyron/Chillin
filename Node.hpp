@@ -8,11 +8,13 @@
 class Node {
 public:
 	Node(Point pos);
+  Node();
 	Point getPosition();
 	void setPosition(Point pos);
 	std::vector <Node*> adjacencyList;
+  Node *Parent;
 private:
-	Point pos;
+  Point pos;
   std::string type;
 };
 
