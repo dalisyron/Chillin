@@ -51,6 +51,9 @@ public:
     P = G.getMap().Walls[0].getLine().getEnd();
     cout << P.X() << " " << P.Y() << endl;
     
+    Point t1(0, 2);
+    Point t2(0, 1);
+    cout << testMap.Intersect(t1, t2) << endl;
     return true;
   }
 }F;

@@ -25,3 +25,23 @@ void Map::setHeight(double height) {
 void Map::setWidth(double width) {
   this -> width = width;
 }
+
+bool Map::Intersect(Point P, Point Q) {
+  for (Wall w : this -> Walls) {
+    if (w.getLine().Intersect(P, Q)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+bool Map::Intersect(Line L) {
+  Point P = L.getStart();
+  Point Q = L.getEnd();
+  for (Wall w : this -> Walls) {
+    if (w.getLine().Intersect(P, Q)) {
+      return true;
+    }
+  }
+  return false;
+}
