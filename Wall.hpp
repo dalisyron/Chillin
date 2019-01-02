@@ -1,3 +1,6 @@
+#ifndef WALL_HPP
+#define WALL_HPP
+
 #include "Line.hpp"
 
 class Wall {
@@ -12,3 +15,5 @@ private:
   Line line;
   bool is_border;
 };
+
+#endif
