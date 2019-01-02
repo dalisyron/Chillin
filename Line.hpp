@@ -5,12 +5,15 @@
 
 class Line {
 public:
+  Line(double Px, double Py, double Qx, double Qy);
   Line(Point P, Point Q);
   Line();
   void setStart(Point P);
   void setEnd(Point Q);
   Point getStart();
   Point getEnd();
+  bool Intersect(Point P, Point Q);
+  bool Intersect(Line L);
 private:
   Point start_point;
   Point end_point;

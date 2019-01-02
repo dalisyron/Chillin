@@ -3,10 +3,13 @@ Map:
 	List of walls
 	width, height
 
-Wall:
-  Point start, end
-  Intersect(Point P, Point Q);
+Line:
+  Start, End
+  Intersect
 
+Wall:
+  Line
+  
 Grid:
 	List of Nodes (vector<Node> nodes)
   static Grid Build(map, medics, powerups)

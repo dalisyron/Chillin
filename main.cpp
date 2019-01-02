@@ -14,4 +14,5 @@ int main() {
   Point end_point = W.getLine().getEnd();
   cout << start_point.X() << " " << start_point.Y() << endl;
   cout << end_point.X() << " " << end_point.Y();
+  
 }
