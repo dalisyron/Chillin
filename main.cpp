@@ -5,6 +5,7 @@
 #include "Grid.hpp"
 
 #include <iostream>
+#include "Utils.hpp"
 
 using namespace std;
 
@@ -56,17 +57,28 @@ public:
     cout << testMap.Intersect(t1, t2) << endl;
     return true;
   }
+
+  bool LineIntersectTest() {
+    Point p1(1, 2), q1(1, 0);
+    Point p2(0, 1), q2(2, 1);
+    cout << "inter stat : " << doIntersect(p1, q1, p2, q2) << endl;
+    cout << "cross stat : " << doCross(p1, q1, p2, q2) << endl;
+    p1 = Point(0, 2);
+    q1 = Point(0, 0);
+    p2 = Point(0, -1);
+    q2 = Point(0, 1);
+    cout << "inter stat : " << doIntersect(p1, q1, p2, q2) << endl;
+    cout << "cross stat : " << doCross(p1, q1, p2, q2) << endl;
+    
+  }
 }F;
 
 int main() {
-  F.mapTest();
+  //F.mapTest();
+  F.LineIntersectTest();
   Point P(10, 10);
 	Point Q(20, 15);
   Line L(P, Q);
   Wall W(L, false);
-  Point start_point = W.getLine().getStart();
-  Point end_point = W.getLine().getEnd();
-  cout << start_point.X() << " " << start_point.Y() << endl;
-  cout << end_point.X() << " " << end_point.Y();
   
 }
