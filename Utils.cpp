@@ -1,24 +1,56 @@
 #include "Utils.hpp"
-#include <iostream>
+#include <cmath>
+#include <algorithm>
 
 //checked on geeksforgeeks judge and self made tests
 
+bool doubleEqual(double a, double b, double EPSILON) {
+	return std::fabs(a - b) < EPSILON;
+}
+
+bool doubleLessEqual(double a, double b, double EPSILON) {
+	if (doubleEqual(a, b, EPSILON)) {
+		return true;
+	}
+	return a < b;
+}
+
+bool doubleGreaterEqual(double a, double b, double EPSILON) {
+	if (doubleEqual(a, b, EPSILON)) {
+		return true;
+	}
+	return a > b;
+}
+
+bool doubleStrictlyLess(double a, double b, double EPSILON) {
+	if (doubleEqual(a, b, EPSILON)) {
+		return false;
+	}
+	return a < b;
+}
+
+bool doubleStrictlyGreater(double a, double b, double EPSILON) {
+	if (doubleEqual(a, b, EPSILON)) {
+		return false;
+	}
+	return a > b;
+}
+
 bool onSegCheck(Point &p, Point &q, Point &r) 
 { 
-  if (q.X() <= std::max(p.X(), r.X()) && q.X() >= std::min(p.X(), r.X()) && 
-    q.Y() <= std::max(p.Y(), r.Y()) && q.Y() >= std::min(p.Y(), r.Y())) 
-  return true; 
-
-  return false; 
+  return (doubleLessEqual(q.X(),std::max(p.X(), r.X()))
+   && doubleGreaterEqual(q.X(),std::min(p.X(), r.X())) 
+   && doubleLessEqual(q.Y(),std::max(p.Y(), r.Y()))
+   && doubleGreaterEqual(q.Y(),std::min(p.Y(), r.Y())));
 } 
 
 int orientation(Point &p, Point &q, Point &r) 
 { 
   double val = (q.Y() - p.Y()) * (r.X() - q.X()) - (q.X() - p.X()) * (r.Y() - q.Y()); 
 
-  if (val == 0) return 0; 
+  if (doubleEqual(val, 0)) return 0; 
 
-  return (val > 0)? 1: 2;
+  return (doubleStrictlyGreater(val, 0))? 1: 2;
 } 
 
 bool doIntersect(Point &p1, Point &q1, Point &p2, Point &q2) 
