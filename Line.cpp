@@ -1,5 +1,6 @@
 #include "Line.hpp"
 #include <algorithm>
+#include "Utils.hpp"
 
 Line::Line(Point P, Point Q) {
   setStart(P);
