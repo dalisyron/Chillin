@@ -15,6 +15,8 @@ public:
   std::vector <Wall> Walls;
   bool Intersect(Point P, Point Q);
   bool Intersect(Line L);
+  bool Cross(Point P, Point Q);
+  bool Cross(Line L);
   
 private:
   double height;

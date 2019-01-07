@@ -45,3 +45,23 @@ bool Map::Intersect(Line L) {
   }
   return false;
 }
+
+bool Map::Cross(Point P, Point Q) {
+  for (Wall w : this -> Walls) {
+    if (w.getLine().Cross(P, Q)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+bool Map::Cross(Line L) {
+  Point P = L.getStart();
+  Point Q = L.getEnd();
+  for (Wall w : this -> Walls) {
+    if (w.getLine().Cross(P, Q)) {
+      return true;
+    }
+  }
+  return false;
+}
