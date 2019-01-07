@@ -41,3 +41,11 @@ bool Line::Intersect(Point P, Point Q) {
 bool Line::Intersect(Line L) {
   return doIntersect(this -> start_point, this -> end_point, L.start_point, L.end_point);
 }
+
+bool Line::Cross(Point P, Point Q) {
+  return doCross(this -> start_point, this -> end_point, P, Q);
+}
+
+bool Line::Cross(Line L) {
+  return doCross(this -> start_point, this -> end_point, L.start_point, L.end_point);
+}

@@ -69,6 +69,13 @@ public:
     q2 = Point(0, 1);
     cout << "inter stat : " << doIntersect(p1, q1, p2, q2) << endl;
     cout << "cross stat : " << doCross(p1, q1, p2, q2) << endl;
+    p1 = Point(0, 0);
+    q1 = Point(3, 3);
+    p2 = Point(0, 3);
+    q2 = Point(1.5, 1.5);
+    Line L3(p1, q1);
+    cout << "line_cross_test : " << L3.Cross(p2, q2) << endl;  
+    cout << "line_intersect_test : " << L3.Intersect(p2, q2) << endl;  
     
   }
 }F;
