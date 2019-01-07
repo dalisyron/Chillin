@@ -3,6 +3,7 @@
 #include <algorithm>
 
 //checked on geeksforgeeks judge and self made tests
+//double cheked after adding double comparison functions
 
 bool doubleEqual(double a, double b, double EPSILON) {
 	return std::fabs(a - b) < EPSILON;
@@ -76,7 +77,7 @@ double getEquationDistance(Point &Z /*point*/, Point &P /*line_start*/, Point &Q
 
 bool onSegment(Point &Z /*point*/, Point &P /*line_start*/, Point &Q /*line_end*/) {
   //std::cout << "eq dist : " << getEquationDistance(Z, P, Q) << std::endl;
-  return getEquationDistance(Z, P, Q) == 0;  
+  return doubleEqual(getEquationDistance(Z, P, Q), 0);
 }
 
 bool doCross(Point &p1, Point &q1, Point &p2, Point &q2) {
