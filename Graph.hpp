@@ -1,14 +1,14 @@
-#ifndef GRID_HPP
-#define GRID_HPP
+#ifndef GRAPH_HPP
+#define GRAPH_HPP
 
 #include <vector>
 #include "Map.hpp"
 #include "Node.hpp"
 
-class Grid {
+class Graph {
 public:
-  Grid(Map map);
-  Grid();
+  Graph(Map map);
+  Graph();
   std::vector <Node> nodes;
   Map getMap();
   void setMap(Map map);

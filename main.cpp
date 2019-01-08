@@ -2,7 +2,7 @@
 #include "Node.hpp"
 #include "Wall.hpp"
 #include "Map.hpp"
-#include "Grid.hpp"
+#include "Graph.hpp"
 
 #include <iostream>
 #include "Utils.hpp"
@@ -46,7 +46,7 @@ public:
     cout << P.X() << " " << P.Y() << endl;
     P = testMap.Walls[0].getLine().getEnd();
     cout << P.X() << " " << P.Y() << endl;
-    Grid G(testMap);
+    Graph G(testMap);
     P = G.getMap().Walls[0].getLine().getStart();
     cout << P.X() << " " << P.Y() << endl;
     P = G.getMap().Walls[0].getLine().getEnd();

@@ -1,1 +1,1 @@
-g++ -std=c++14 main.cpp Line.cpp Point.cpp Node.cpp Wall.cpp Map.cpp Grid.cpp Utils.cpp -o test
+g++ -std=c++14 main.cpp Line.cpp Point.cpp Node.cpp Wall.cpp Map.cpp Graph.cpp Utils.cpp -o test
